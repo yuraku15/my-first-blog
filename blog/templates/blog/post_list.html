@@ -3,19 +3,21 @@
     <title>ESPACIOS DE ENCUENTRO</title>
   </head>
   <body>
+
     <div>
       <h1>ESPACIOS DE ENCUENTRO</h1>
     </div>
+    {% for post in posts %}
     <div>
-      <p>5 de marzo de 2016</p>
+      <p>publicado el: {{post.published_date}}</p>
       <h2>
         <a href="#">
-        TITULO
+        {{post.titulo}}
         </a>
       </h2>
-      <p>CONTENIDO</p>
+      <p>{{post.contenido|linebreaks}}</p>
     </div>
-
+    {% endfor %}
 
   </body>
 </html>
